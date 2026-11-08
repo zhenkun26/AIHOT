@@ -117,7 +117,12 @@ You need [Docker](https://docs.docker.com/get-started/get-docker/), [Node.js 24]
 ```bash
 git clone https://github.com/KKKKhazix/AIHOT.git myhot
 cd myhot
-node scripts/init-env.ts --llm-key <your model API key>
+node scripts/init-env.ts
+```
+
+Fill in `LLM_API_KEY` in the generated local `.env` file, adjust `LLM_BASE_URL` and `LLM_MODEL` if needed, and save it before starting. Keep real API keys out of terminal commands to avoid leaving them in shell history. Do not commit `.env`.
+
+```bash
 docker compose up -d --build
 ```
 

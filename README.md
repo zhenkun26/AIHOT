@@ -116,7 +116,12 @@
 ```bash
 git clone https://github.com/KKKKhazix/AIHOT.git myhot
 cd myhot
-node scripts/init-env.ts --llm-key <你的模型 API Key>
+node scripts/init-env.ts
+```
+
+在本地生成的 `.env` 中填入 `LLM_API_KEY`，按需调整 `LLM_BASE_URL` 和 `LLM_MODEL`，保存后再启动。不要把真实 API Key 写入终端命令，以免留在 shell 历史记录中；不要提交 `.env`。
+
+```bash
 docker compose up -d --build
 ```
 
